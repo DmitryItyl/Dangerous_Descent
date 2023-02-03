@@ -9,7 +9,7 @@ public class PlayerCotroller : MonoBehaviour
     [SerializeField] GameObject axePrefab;
     [SerializeField] float projectileForce;
 
-    [SerializeField] float fireRate = 0.41f;
+    [SerializeField] float fireRate = 0.68f;
 
     private float xAxis;
     private float yAxis;
@@ -144,7 +144,7 @@ public class PlayerCotroller : MonoBehaviour
     {
         while (isAttacking)
         {
-            yield return new WaitForSeconds(0.29f);
+            yield return new WaitForSeconds(fireRate * 0.72f);
             Vector3 mousePos = GetMouseWorldPosition(Input.mousePosition) - this.transform.position;
             Flip(mousePos.x);
 
@@ -162,7 +162,7 @@ public class PlayerCotroller : MonoBehaviour
             Vector2 forceApplied = new Vector2(xComponent, zComponent);
             rb.AddForce(forceApplied, ForceMode2D.Impulse);
 
-            yield return new WaitForSeconds(0.12f);
+            yield return new WaitForSeconds(fireRate * 0.28f);
         }
 
         AttackComplete();
