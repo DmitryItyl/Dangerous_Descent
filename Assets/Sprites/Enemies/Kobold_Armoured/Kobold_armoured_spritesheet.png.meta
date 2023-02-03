@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: 44aebb7943042894b9641aee2451c5d5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3924796506087370715
+    second: Kobold_armoured_spritesheet_0
+  - first:
+      213: -1065370138448292940
+    second: Kobold_armoured_spritesheet_1
+  - first:
+      213: 4522241392379717187
+    second: Kobold_armoured_spritesheet_2
+  - first:
+      213: -5939773594290210838
+    second: Kobold_armoured_spritesheet_3
+  - first:
+      213: 5852543017010102133
+    second: Kobold_armoured_spritesheet_4
+  - first:
+      213: 868058657423773555
+    second: Kobold_armoured_spritesheet_5
+  - first:
+      213: -6287908344000528362
+    second: Kobold_armoured_spritesheet_6
+  - first:
+      213: 8350079811667989059
+    second: Kobold_armoured_spritesheet_7
+  - first:
+      213: 8916677604923524222
+    second: Kobold_armoured_spritesheet_8
+  - first:
+      213: 4529803736520328091
+    second: Kobold_armoured_spritesheet_9
+  - first:
+      213: -4808578318971361474
+    second: Kobold_armoured_spritesheet_10
+  - first:
+      213: 3210844467227426843
+    second: Kobold_armoured_spritesheet_11
+  - first:
+      213: -3091553508093152511
+    second: Kobold_armoured_spritesheet_12
+  - first:
+      213: 6943306837557355977
+    second: Kobold_armoured_spritesheet_13
+  - first:
+      213: 6361720705796252917
+    second: Kobold_armoured_spritesheet_14
+  - first:
+      213: 6646966317368249863
+    second: Kobold_armoured_spritesheet_15
+  - first:
+      213: 4474373767918495656
+    second: Kobold_armoured_spritesheet_16
+  - first:
+      213: -5049744009449609421
+    second: Kobold_armoured_spritesheet_17
+  - first:
+      213: -6632728074419197193
+    second: Kobold_armoured_spritesheet_18
+  - first:
+      213: 8927016432940356865
+    second: Kobold_armoured_spritesheet_19
+  - first:
+      213: -1043237365845756878
+    second: Kobold_armoured_spritesheet_20
+  - first:
+      213: -456686092114697422
+    second: Kobold_armoured_spritesheet_21
+  - first:
+      213: -5193770013444997340
+    second: Kobold_armoured_spritesheet_22
+  - first:
+      213: -5543583642746049841
+    second: Kobold_armoured_spritesheet_23
+  - first:
+      213: -3091769310895869597
+    second: Kobold_armoured_spritesheet_24
+  - first:
+      213: -7097257597758594067
+    second: Kobold_armoured_spritesheet_25
+  - first:
+      213: 787445715740597723
+    second: Kobold_armoured_spritesheet_26
+  - first:
+      213: -8141551332739200725
+    second: Kobold_armoured_spritesheet_27
+  - first:
+      213: -333661067786806782
+    second: Kobold_armoured_spritesheet_28
+  - first:
+      213: 283352970655355104
+    second: Kobold_armoured_spritesheet_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 42
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf2809b0ada77630800000000000000
+      internalID: 3924796506087370715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 168
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b31b7fe08b0731f0800000000000000
+      internalID: -1065370138448292940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 168
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3466c55269a32ce30800000000000000
+      internalID: 4522241392379717187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 168
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae73612e26fa19da0800000000000000
+      internalID: -5939773594290210838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 168
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f7499add8683150800000000000000
+      internalID: 5852543017010102133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 168
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f42ffefb6fb0c00800000000000000
+      internalID: 868058657423773555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61042a70dacdcb8a0800000000000000
+      internalID: -6287908344000528362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 126
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34291ac195171e370800000000000000
+      internalID: 8350079811667989059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 126
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74c5220a076ebb70800000000000000
+      internalID: 8916677604923524222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 126
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9308899f781dde30800000000000000
+      internalID: 4529803736520328091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 126
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37211fee7f744db0800000000000000
+      internalID: -4808578318971361474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 126
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b108e1af7063f8c20800000000000000
+      internalID: 3210844467227426843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103bef1d6789815d0800000000000000
+      internalID: -3091553508093152511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 84
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5a52318c49b5060800000000000000
+      internalID: 6943306837557355977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 84
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4ab3da64f594850800000000000000
+      internalID: 6361720705796252917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 84
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e88b406a4ce3c50800000000000000
+      internalID: 6646966317368249863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 84
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7ab155c3b281e30800000000000000
+      internalID: 4474373767918495656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 84
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337691ef394bbe9b0800000000000000
+      internalID: -5049744009449609421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7faab7045f0d3f3a0800000000000000
+      internalID: -6632728074419197193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 42
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1051c7df52223eb70800000000000000
+      internalID: 8927016432940356865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 42
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2347950a42da581f0800000000000000
+      internalID: -1043237365845756878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 42
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23364a93b6689a9f0800000000000000
+      internalID: -456686092114697422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 42
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ff887c0b50ce7b0800000000000000
+      internalID: -5193770013444997340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 42
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaa47f4c0c3113b0800000000000000
+      internalID: -5543583642746049841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361f8905134d715d0800000000000000
+      internalID: -3091769310895869597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3282651d9718d90800000000000000
+      internalID: -7097257597758594067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd1f96d4b19dea00800000000000000
+      internalID: 787445715740597723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29c87bd236630f80800000000000000
+      internalID: -8141551332739200725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a9033d6099e5bf0800000000000000
+      internalID: -333661067786806782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kobold_armoured_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0d6f9860caee300800000000000000
+      internalID: 283352970655355104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
