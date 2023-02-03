@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ObstacleMap
   layers:
   - Default
   - TransparentFX
@@ -38,12 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1324948397
+    locked: 0
+  - name: Floor
+    uniqueID: 1681463659
+    locked: 0
+  - name: Walls
+    uniqueID: 1611654075
+    locked: 0
+  - name: Player
+    uniqueID: 3769159541
+    locked: 0
+  - name: FrontWalls
+    uniqueID: 1214449321
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: background
-    uniqueID: 2352954517
-    locked: 0
-  - name: foreground
-    uniqueID: 988259113
     locked: 0
