@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(AutoDestroy(2.0f));
+        if(collision.gameObject.tag != "Player" && collision.gameObject.tag != "Axe")
+        {
+            StuckIn(collision);
+            Destroy(gameObject, 2f);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void StuckIn(Collider2D collision)
     {
-        
-    }
-
-    private IEnumerator AutoDestroy(float time)
-    {
-        yield return new WaitForSeconds(time);
-        Destroy(gameObject);
+        gameObject.GetComponent<Animator>().Play("AxeStuck");
+        var velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+        if (velocity.x < 0 && velocity.y < 0)
+        {
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        transform.parent = collision.transform;
     }
 }

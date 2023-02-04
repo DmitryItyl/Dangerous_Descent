@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1939332109039654607}
   m_Layer: 0
   m_Name: Axe
-  m_TagString: Untagged
+  m_TagString: Axe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009414524, y: 0.26360542}
+  m_Offset: {x: 0.22108012, y: 0.3679837}
   serializedVersion: 2
-  m_Radius: 0.24580912
+  m_Radius: 0.1332553
 --- !u!50 &3967543064837462318
 Rigidbody2D:
   serializedVersion: 4

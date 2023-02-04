@@ -11,6 +11,12 @@ public class PlayerCotroller : MonoBehaviour
 
     [SerializeField] float fireRate = 0.68f;
 
+    [SerializeField] int damageDealt;
+    [SerializeField] int maxHealth;
+
+    private int currentHealth;
+    private int experience;
+
     private float xAxis;
     private float yAxis;
 
@@ -37,6 +43,8 @@ public class PlayerCotroller : MonoBehaviour
         animator = GetComponent<Animator>();
 
         axeSpawnPoint = transform.Find("AxeSpawnPoint");
+
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -50,9 +58,6 @@ public class PlayerCotroller : MonoBehaviour
     private void FixedUpdate()
     {
         Move(xAxis, yAxis);
-
-        //Debug.Log(isAttacking);
-
 
         if (isAttackPressed)
         {
@@ -105,9 +110,7 @@ public class PlayerCotroller : MonoBehaviour
         if (currentState == newState)
             return;
 
-        Debug.Log("Transitioning to: " + newState);
         animator.Play(newState);
-
         currentState = newState;
     }
 
@@ -137,7 +140,7 @@ public class PlayerCotroller : MonoBehaviour
         StartCoroutine(ThrowAxe());
 
         Vector3 mousePos = GetMouseWorldPosition(Input.mousePosition) - this.transform.position;
-        Flip(mousePos.x);;
+        Flip(mousePos.x);
     }
 
     private IEnumerator ThrowAxe()
@@ -168,12 +171,31 @@ public class PlayerCotroller : MonoBehaviour
         AttackComplete();
     }
 
+    public int DeliverDamage()
+    {
+        return damageDealt;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
+        // if health == 0: Die();
+    }
+
     #endregion
 
     void AttackComplete()
     {
         moveSpeed /= attackSlowDownModifier;
         isAttacking = false;
+    }
+
+    public void AwardExperience(int xp)
+    {
+        experience += xp;
+        Debug.Log("Gained experience! Current value:" + experience);
+        // check for lvl up
     }
 
     // utility method: get mouse world position
