@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCotroller : MonoBehaviour
 {
@@ -24,9 +26,11 @@ public class PlayerCotroller : MonoBehaviour
     private string currentState;
 
     private Rigidbody2D rb;
+    private bool isAlive;
     private bool isFacingRight = true;
     private bool isAttackPressed;
     private bool isAttacking;
+    private bool deatAnimOver = false;
 
     private Transform axeSpawnPoint;
     private float attackSlowDownModifier = 0.2f;
@@ -37,6 +41,10 @@ public class PlayerCotroller : MonoBehaviour
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_DEATH = "Death";
 
+    HPBar hpBar;
+    GameObject levelUpButton;
+    List<string> powerUps = new List<string>();
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,6 +53,12 @@ public class PlayerCotroller : MonoBehaviour
         axeSpawnPoint = transform.Find("AxeSpawnPoint");
 
         currentHealth = maxHealth;
+
+        isAlive = true;
+
+        hpBar = GameObject.Find("HPBar").GetComponentInChildren<HPBar>();
+        levelUpButton = GameObject.Find("LevelUpButton");
+        levelUpButton.SetActive(false);
     }
 
     void Update()
@@ -57,31 +71,34 @@ public class PlayerCotroller : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Move(xAxis, yAxis);
-
-        if (isAttackPressed)
+        if (isAlive)
         {
+            Move(xAxis, yAxis);
+
+            if (isAttackPressed)
+            {
+                if (!isAttacking)
+                {
+                    isAttacking = true;
+
+                    StartShooting();
+                }
+            }
+            else if (isAttacking)
+            {
+                isAttacking = false;
+            }
+
             if (!isAttacking)
             {
-                isAttacking = true;
-
-                StartShooting();
-            }
-        }
-        else if (isAttacking)
-        {
-            isAttacking = false;
-        }
-
-        if (!isAttacking)
-        {
-            if ((xAxis != 0) || (yAxis != 0))
-            {
-                ChangeAnimationState(PLAYER_RUN);
-            }
-            else
-            {
-                ChangeAnimationState(PLAYER_IDLE);
+                if ((xAxis != 0) || (yAxis != 0))
+                {
+                    ChangeAnimationState(PLAYER_RUN);
+                }
+                else
+                {
+                    ChangeAnimationState(PLAYER_IDLE);
+                }
             }
         }
     }
@@ -106,7 +123,7 @@ public class PlayerCotroller : MonoBehaviour
     }
 
     private void ChangeAnimationState(string newState)
-    { 
+    {
         if (currentState == newState)
             return;
 
@@ -176,12 +193,16 @@ public class PlayerCotroller : MonoBehaviour
         return damageDealt;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool healInsted = false)
     {
-        Debug.Log(currentHealth);
+        if (healInsted)
+            damage = -damage;
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
-        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
-        // if health == 0: Die();
+
+        hpBar.SetHealthPencents((float)currentHealth / (float)maxHealth);
+
+        if (currentHealth <= 0)
+            GameOver();
     }
 
     #endregion
@@ -196,7 +217,31 @@ public class PlayerCotroller : MonoBehaviour
     {
         experience += xp;
         Debug.Log("Gained experience! Current value:" + experience);
+
+        if (experience >= 100)
+        {
+            levelUpButton.SetActive(true);
+            experience -= 100;
+        }
         // check for lvl up
+    }
+
+    public void ApplyPowerUp(string powerUpName)
+    {
+        switch (powerUpName)
+        {
+            case "Heal":
+                TakeDamage(40, true);
+                break;
+            case "Damage":
+                damageDealt += 5;
+                powerUps.Add(powerUpName);
+                break;
+            case "Speed":
+                moveSpeed *= 1.2f;
+                powerUps.Add(powerUpName);
+                break;
+        }
     }
 
     // utility method: get mouse world position
@@ -206,4 +251,25 @@ public class PlayerCotroller : MonoBehaviour
         worldPosition.z = 0f;
         return worldPosition;
     }
+
+    void GameOver()
+    {
+        //Time.timeScale = 0f;
+        isAlive = false;
+        StartCoroutine(PlayDeathAnimation());
+
+        if (deatAnimOver)
+        {
+            Time.timeScale = 0f;
+            GameObject.Find("HUD").GetComponent<MenuController>().GameOver(gameObject.transform.position);
+        }
+    }
+
+    IEnumerator PlayDeathAnimation()
+    {
+        animator.Play(PLAYER_DEATH);
+        yield return new WaitForSeconds(0.8f);
+        deatAnimOver = true;
+    }
+
 }

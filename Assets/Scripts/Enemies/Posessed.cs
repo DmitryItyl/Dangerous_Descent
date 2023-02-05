@@ -92,6 +92,7 @@ public class Posessed : EnemyBase
     {
         agent.speed /= attackSlowDownModifier;
         ChangeAnimationState(ENEMY_RUN);
+
         isAttacking = false;
     }
 }

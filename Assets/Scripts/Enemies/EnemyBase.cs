@@ -31,6 +31,7 @@ public class EnemyBase : MonoBehaviour
     protected bool isAlive = true;
 
     string currentState;
+    int XPValue = 20;
 
     // Animation states
     protected const string ENEMY_ATTACK = "Attack";
@@ -84,10 +85,6 @@ public class EnemyBase : MonoBehaviour
             {
                 isAttacking = false;
             }
-        }
-        else
-        {
-            Die();
         }
     }
 
@@ -164,6 +161,7 @@ public class EnemyBase : MonoBehaviour
         {
             isAlive = false;
             healthBar.TurnOff();
+            Die();
             return;
         }
 
@@ -189,6 +187,7 @@ public class EnemyBase : MonoBehaviour
     protected void Die()
     {
         animator.Play(ENEMY_DEATH);
+        player.GetComponent<PlayerCotroller>().AwardExperience(XPValue);
         agent.isStopped = true;
         Destroy(gameObject, 4f);
     }
