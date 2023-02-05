@@ -137,7 +137,8 @@ public class EnemyBase : MonoBehaviour
 
     protected void CheckAggro()
     {
-        if (!isAggro && agent.remainingDistance <= aggroDistance)
+        float distance = (player.position - transform.position).magnitude;
+        if (!isAggro && distance <= aggroDistance)
         {
             isAggro = true;
             ChangeAnimationState(ENEMY_RUN);
@@ -156,16 +157,21 @@ public class EnemyBase : MonoBehaviour
 
     virtual public void TakeDamage(int takenDamage)
     {
+        isAggro = true;
+
         currentHealth = Mathf.Clamp(currentHealth - takenDamage, 0, maxHealth);
         if (currentHealth <= 0)
         {
+            if (isAlive)
+                healthBar.TurnOff();
+
             isAlive = false;
-            healthBar.TurnOff();
             Die();
             return;
         }
 
-        healthBar.SetHealth(currentHealth, maxHealth);
+        if(isAlive)
+            healthBar.SetHealth(currentHealth, maxHealth);
 
         ChangeAnimationState(ENEMY_HIT);
         StartCoroutine(DamageRecieve());
@@ -186,6 +192,7 @@ public class EnemyBase : MonoBehaviour
 
     protected void Die()
     {
+        player.GetComponent<PlayerCotroller>().CheckClear();
         animator.Play(ENEMY_DEATH);
         player.GetComponent<PlayerCotroller>().AwardExperience(XPValue);
         agent.isStopped = true;

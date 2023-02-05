@@ -534,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2320069140726525644}
   kobaldArmouredSpeed: 2
-  kobaldArmouredAggroDistance: 5
+  kobaldArmouredAggroDistance: 2
   kobaldArmouredHealth: 30
   kobaldArmouredAttackRate: 0.6
   kobaldArmouredAttackReach: 1

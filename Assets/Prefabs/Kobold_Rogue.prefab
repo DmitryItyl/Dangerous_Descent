@@ -459,7 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4958500527191490678}
   koboldRogueSpeed: 2.5
-  koboldRogueAggroDistance: 6
+  koboldRogueAggroDistance: 2
   koboldRogueHealth: 20
   koboldRogueAttackRate: 0.7
   koboldRogueAttackReach: 0.5
