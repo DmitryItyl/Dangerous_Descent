@@ -8,6 +8,7 @@ public class Slime : EnemyBase
     [SerializeField] int slimeHealth;
     [SerializeField] float slimeAttackRate;
     [SerializeField] float slimeAttackReach;
+    [SerializeField] float slimeSpeed;
 
     private bool isSmall = false;
 
@@ -21,5 +22,6 @@ public class Slime : EnemyBase
         maxHealth = slimeHealth;
         attackRate = slimeAttackRate;
         reach = slimeAttackReach;
+        speed = slimeSpeed;
     }
 }

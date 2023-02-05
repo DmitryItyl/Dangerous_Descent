@@ -7,6 +7,7 @@ TagManager:
   - ObstacleMap
   - Axe
   - Enemy
+  - PickAxe
   layers:
   - Default
   - TransparentFX
