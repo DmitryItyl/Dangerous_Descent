@@ -8,6 +8,7 @@ TagManager:
   - Axe
   - Enemy
   - PickAxe
+  - Crystal
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3769159541
+    locked: 0
+  - name: FrontObjects
+    uniqueID: 751376079
     locked: 0
   - name: FrontWalls
     uniqueID: 1214449321
