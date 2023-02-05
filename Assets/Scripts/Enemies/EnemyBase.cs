@@ -12,7 +12,7 @@ public class EnemyBase : MonoBehaviour
 
     protected float reach;
 
-    private int currentHealth;
+    protected int currentHealth;
     protected int maxHealth;
 
     protected Animator animator;
@@ -22,9 +22,9 @@ public class EnemyBase : MonoBehaviour
 
     protected NavMeshAgent agent;
 
-    bool isAttacking;
-    private float attackSlowDownModifier = 0.2f;
-    private float hitSlowDownModifier = 0.05f;
+    protected bool isAttacking;
+    protected float attackSlowDownModifier = 0.2f;
+    protected float hitSlowDownModifier = 0.05f;
 
     protected bool isAggro = false;
     protected bool facesRight = true;
@@ -39,6 +39,9 @@ public class EnemyBase : MonoBehaviour
     protected const string ENEMY_DEATH = "Death";
     protected const string ENEMY_HIT = "Hit";
 
+    [SerializeField]
+    protected HealthBarController healthBar;
+
     protected void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -51,6 +54,8 @@ public class EnemyBase : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = speed;
+
+        healthBar.SetHealth(currentHealth, maxHealth);
 
         currentState = ENEMY_IDLE;
     }
@@ -81,7 +86,9 @@ public class EnemyBase : MonoBehaviour
             }
         }
         else
+        {
             Die();
+        }
     }
 
     #region Movement
@@ -92,7 +99,6 @@ public class EnemyBase : MonoBehaviour
         Vector3 goToPosition = new Vector3(player.position.x + 0.4f * cornerPlayerDirection, player.position.y, player.position.z);
 
         agent.SetDestination(goToPosition);
-        Debug.Log(agent.speed);
         ControlDirection();
     }
 
@@ -151,22 +157,23 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int takenDamage)
+    virtual public void TakeDamage(int takenDamage)
     {
         currentHealth = Mathf.Clamp(currentHealth - takenDamage, 0, maxHealth);
         if (currentHealth <= 0)
         {
             isAlive = false;
+            healthBar.TurnOff();
             return;
         }
 
+        healthBar.SetHealth(currentHealth, maxHealth);
+
         ChangeAnimationState(ENEMY_HIT);
         StartCoroutine(DamageRecieve());
-
-        Debug.Log("Enemy health: " + currentHealth);
     }
 
-    protected IEnumerator DamageRecieve()
+    virtual protected IEnumerator DamageRecieve()
     {
         agent.speed *= hitSlowDownModifier;
         yield return new WaitForSeconds(attackRate * 0.25f);
@@ -181,13 +188,12 @@ public class EnemyBase : MonoBehaviour
 
     protected void Die()
     {
-        Debug.Log("Dead");
         animator.Play(ENEMY_DEATH);
         agent.isStopped = true;
         Destroy(gameObject, 4f);
     }
 
-    protected void StartMeleeAttack()
+    virtual protected void StartMeleeAttack()
     {
         ChangeAnimationState(ENEMY_ATTACK);
         agent.speed *= attackSlowDownModifier;
