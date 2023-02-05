@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile_Enemy : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Player" && collision.gameObject.tag != "Axe")
+        if (collision.gameObject.tag != "Enemy" && collision.gameObject.tag != "PickAxe")
         {
             StuckIn(collision);
             Destroy(gameObject, 2f);
         }
 
-        if (collision.tag == "PickAxe")
+        if (collision.tag == "Axe")
         {
             Destroy(gameObject);
         }
@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
 
     void StuckIn(Collider2D collision)
     {
-        gameObject.GetComponent<Animator>().Play("AxeStuck");
+        gameObject.GetComponent<Animator>().Play("PickAxeStuck");
         var velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
         if (velocity.x < 0 && velocity.y < 0)
         {

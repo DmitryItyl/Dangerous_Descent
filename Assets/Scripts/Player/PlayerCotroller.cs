@@ -178,6 +178,7 @@ public class PlayerCotroller : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Debug.Log(currentHealth);
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
         // if health == 0: Die();
