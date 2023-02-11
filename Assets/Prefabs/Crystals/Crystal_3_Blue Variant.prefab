@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1187394518561198028, guid: 4853428b9d4232d4c808464859aea5a6, type: 3}
       propertyPath: m_Name
-      value: Crystal_3_Blue
+      value: Crystal_3_Blue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187394518561198028, guid: 4853428b9d4232d4c808464859aea5a6, type: 3}
+      propertyPath: m_TagString
+      value: Crystal
       objectReference: {fileID: 0}
     - target: {fileID: 1187394518561198029, guid: 4853428b9d4232d4c808464859aea5a6, type: 3}
       propertyPath: m_RootOrder

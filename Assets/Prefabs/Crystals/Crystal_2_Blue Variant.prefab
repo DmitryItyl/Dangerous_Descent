@@ -69,7 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4258786670786453207, guid: b3f55d581ffc7e646b90d2a139d468d4, type: 3}
       propertyPath: m_Name
-      value: Crystal_2_Blue
+      value: Crystal_2_Blue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258786670786453207, guid: b3f55d581ffc7e646b90d2a139d468d4, type: 3}
+      propertyPath: m_TagString
+      value: Crystal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f55d581ffc7e646b90d2a139d468d4, type: 3}
