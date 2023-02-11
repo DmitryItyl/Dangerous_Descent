@@ -42,8 +42,17 @@ public class PlayerCotroller : MonoBehaviour
     const string PLAYER_DEATH = "Death";
 
     HPBar hpBar;
+    MenuController levels;
     GameObject levelUpButton;
+    GameObject gameOverScreen;
     List<string> powerUps = new List<string>();
+
+    bool isStageClear;
+
+    private void Awake()
+    {
+        isStageClear = false;
+    }
 
     void Start()
     {
@@ -57,8 +66,12 @@ public class PlayerCotroller : MonoBehaviour
         isAlive = true;
 
         hpBar = GameObject.Find("HPBar").GetComponentInChildren<HPBar>();
+        levels = GameObject.Find("HUD").GetComponent<MenuController>();
         levelUpButton = GameObject.Find("LevelUpButton");
         levelUpButton.SetActive(false);
+
+        gameOverScreen = GameObject.Find("GameOverScreen");
+        gameOverScreen.SetActive(false);
     }
 
     void Update()
@@ -193,6 +206,17 @@ public class PlayerCotroller : MonoBehaviour
         return damageDealt;
     }
 
+    public void CheckClear()
+    {
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy").ToList();
+        if (enemies.Count == 0)
+        {
+            Debug.Log("All clear");
+            isStageClear = true;
+            levels.CurrentLevelClear();
+        }
+    }
+
     public void TakeDamage(int damage, bool healInsted = false)
     {
         if (healInsted)
@@ -261,7 +285,19 @@ public class PlayerCotroller : MonoBehaviour
         if (deatAnimOver)
         {
             Time.timeScale = 0f;
-            GameObject.Find("HUD").GetComponent<MenuController>().GameOver(gameObject.transform.position);
+
+            gameOverScreen.SetActive(true);
+            var gameOverCanvas = gameOverScreen.GetComponent<Canvas>().GetComponent<CanvasGroup>();
+            DoFadeIn(gameOverCanvas);
+        }
+    }
+
+    IEnumerator DoFadeIn(CanvasGroup canvas)
+    {
+        while (canvas.alpha < 1)
+        {
+            canvas.alpha += 0.01f;
+            yield return null;
         }
     }
 
@@ -272,4 +308,9 @@ public class PlayerCotroller : MonoBehaviour
         deatAnimOver = true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Finish")
+            levels.LoadNextLevel();            
+    }
 }

@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
 
     static bool isPaused = false;
     GameObject gameOverScreen;
+    GameObject door;
 
     public void StartGame()
     {
@@ -30,8 +31,21 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(index);
         Time.timeScale = 1f;
-        gameOverScreen = GameObject.Find("GameOverScreen");
-        gameOverScreen.SetActive(false);
+        door = GameObject.Find("Door");
+    }
+
+    public void LoadNextLevel()
+    {
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == 1 || currentSceneIndex == 2)
+            LoadLevel(currentSceneIndex + 1);
+        else if (currentSceneIndex == 3)
+            LoadMainMenu();
+    }
+
+    public void CurrentLevelClear()
+    {
+        //door.GetComponent<LevelFinish>().StageClear();
     }
 
     public void QuitGame()
@@ -56,21 +70,5 @@ public class MenuController : MonoBehaviour
     public void SetPaused(bool _isPaused)
     {
         isPaused = _isPaused;
-    }
-
-    public void GameOver(Vector3 posDead)
-    {
-        gameOverScreen.SetActive(true);
-        var gameOverCanvas = gameOverScreen.GetComponent<Canvas>().GetComponent<CanvasGroup>();
-        DoFadeIn(gameOverCanvas);
-    }
-
-    IEnumerator DoFadeIn(CanvasGroup canvas)
-    {
-        while (canvas.alpha < 1)
-        {
-            canvas.alpha += 0.01f;
-            yield return null;
-        }
     }
 }

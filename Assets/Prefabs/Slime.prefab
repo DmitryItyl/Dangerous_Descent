@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5806180073097374683}
-  slimeAggroDistance: 1.5
+  slimeAggroDistance: 1
   slimeHealth: 30
   slimeAttackRate: 0.5
   slimeAttackReach: 1
