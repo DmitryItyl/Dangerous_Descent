@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag != "Player" && collision.gameObject.tag != "Axe")
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Axe")
         {
             StuckIn(collision);
             Destroy(gameObject, 2f);

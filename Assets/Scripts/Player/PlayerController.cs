@@ -1,56 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerCotroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    // Speed and modifiers
     [SerializeField] float moveSpeed;
-
-    [SerializeField] GameObject axePrefab;
-    [SerializeField] float projectileForce;
-
-    [SerializeField] float fireRate = 0.68f;
-
-    [SerializeField] int damageDealt;
-    [SerializeField] int maxHealth;
-
-    private int currentHealth;
-    private int experience;
-
+    private float attackSlowDownModifier = 0.2f;
     private float xAxis;
     private float yAxis;
 
-    private Animator animator;
-    private string currentState;
+    // Shooting
+    [SerializeField] GameObject axePrefab;
+    [SerializeField] float projectileForce;
+    [SerializeField] float fireRate = 0.68f;
+    [SerializeField] int damageDealt;
 
+    // Health and stats
+    [SerializeField] int maxHealth;
+    private int currentHealth;
+    private int experience;
+
+    // Objects references
+    private Animator animator;
     private Rigidbody2D rb;
+    private Transform axeSpawnPoint;
+
+    // General states
     private bool isAlive;
     private bool isFacingRight = true;
     private bool isAttackPressed;
     private bool isAttacking;
     private bool deatAnimOver = false;
 
-    private Transform axeSpawnPoint;
-    private float attackSlowDownModifier = 0.2f;
-
     // Animation states
     const string PLAYER_ATTACK = "Attack";
     const string PLAYER_RUN = "Run";
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_DEATH = "Death";
+    private string currentState;
 
+    // UI references
     HPBar hpBar;
     MenuController levels;
     GameObject levelUpButton;
     GameObject gameOverScreen;
-    List<string> powerUps = new List<string>();
 
+    // Progression
     bool isStageClear;
+    List<string> powerUps = new List<string>();
 
     private void Awake()
     {
+        // new stage is always not cleared
         isStageClear = false;
     }
 
@@ -60,7 +65,6 @@ public class PlayerCotroller : MonoBehaviour
         animator = GetComponent<Animator>();
 
         axeSpawnPoint = transform.Find("AxeSpawnPoint");
-
         currentHealth = maxHealth;
 
         isAlive = true;
@@ -76,44 +80,24 @@ public class PlayerCotroller : MonoBehaviour
 
     void Update()
     {
-        xAxis = Input.GetAxisRaw("Horizontal");
-        yAxis = Input.GetAxisRaw("Vertical");
-
-        isAttackPressed = Input.GetButton("Fire1");
+        CheckInput();
     }
 
     private void FixedUpdate()
     {
-        if (isAlive)
-        {
-            Move(xAxis, yAxis);
+        if (!isAlive)
+            return;
 
-            if (isAttackPressed)
-            {
-                if (!isAttacking)
-                {
-                    isAttacking = true;
+        Move(xAxis, yAxis);
+        HandleAttack();
+    }
 
-                    StartShooting();
-                }
-            }
-            else if (isAttacking)
-            {
-                isAttacking = false;
-            }
+    void CheckInput()
+    {
+        xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Input.GetAxisRaw("Vertical");
 
-            if (!isAttacking)
-            {
-                if ((xAxis != 0) || (yAxis != 0))
-                {
-                    ChangeAnimationState(PLAYER_RUN);
-                }
-                else
-                {
-                    ChangeAnimationState(PLAYER_IDLE);
-                }
-            }
-        }
+        isAttackPressed = Input.GetButton("Fire1");
     }
 
     #region Sprites and animations
@@ -150,6 +134,7 @@ public class PlayerCotroller : MonoBehaviour
 
     private void Move(float horizontal, float vertical)
     {
+        Debug.Log(moveSpeed);
 
         var movement = new Vector2(horizontal, vertical).normalized * moveSpeed;
 
@@ -157,11 +142,35 @@ public class PlayerCotroller : MonoBehaviour
             Flip(horizontal);
 
         rb.velocity = movement;
+
+        if (!isAttacking && !isAttackPressed)
+        {
+            if ((xAxis != 0) || (yAxis != 0))
+            {
+                ChangeAnimationState(PLAYER_RUN);
+            }
+            else
+            {
+                ChangeAnimationState(PLAYER_IDLE);
+            }
+        }
     }
 
     #endregion
 
     #region Attacking
+
+    void HandleAttack()
+    {
+        if (isAttackPressed)
+        {
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                StartShooting();
+            }
+        }
+    }
 
     private void StartShooting()
     {
@@ -175,30 +184,33 @@ public class PlayerCotroller : MonoBehaviour
 
     private IEnumerator ThrowAxe()
     {
-        while (isAttacking)
-        {
-            yield return new WaitForSeconds(fireRate * 0.72f);
-            Vector3 mousePos = GetMouseWorldPosition(Input.mousePosition) - this.transform.position;
-            Flip(mousePos.x);
+        yield return new WaitForSeconds(fireRate * 0.72f);
+        Vector3 mousePos = GetMouseWorldPosition(Input.mousePosition) - this.transform.position;
+        Flip(mousePos.x);
 
-            Vector3 aimDirection = (mousePos).normalized;
-            var aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x);
-            float aimAngleDeg = aimAngle * Mathf.Rad2Deg;
-            axeSpawnPoint.transform.eulerAngles = new Vector3(0, 0, aimAngleDeg);
+        Vector3 aimDirection = (mousePos).normalized;
+        var aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x);
+        float aimAngleDeg = aimAngle * Mathf.Rad2Deg;
+        axeSpawnPoint.transform.eulerAngles = new Vector3(0, 0, aimAngleDeg);
 
-            GameObject bullet = Instantiate(axePrefab, axeSpawnPoint.position, Quaternion.identity);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        GameObject bullet = Instantiate(axePrefab, axeSpawnPoint.position, Quaternion.identity);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
-            float xComponent = Mathf.Cos(aimAngle) * projectileForce;
-            float zComponent = Mathf.Sin(aimAngle) * projectileForce;
+        float xComponent = Mathf.Cos(aimAngle) * projectileForce;
+        float zComponent = Mathf.Sin(aimAngle) * projectileForce;
 
-            Vector2 forceApplied = new Vector2(xComponent, zComponent);
-            rb.AddForce(forceApplied, ForceMode2D.Impulse);
+        Vector2 forceApplied = new Vector2(xComponent, zComponent);
+        rb.AddForce(forceApplied, ForceMode2D.Impulse);
 
-            yield return new WaitForSeconds(fireRate * 0.28f);
-        }
+        yield return new WaitForSeconds(fireRate * 0.28f);
 
         AttackComplete();
+    }
+
+    void AttackComplete()
+    {
+        moveSpeed /= attackSlowDownModifier;
+        isAttacking = false;
     }
 
     public int DeliverDamage()
@@ -231,11 +243,6 @@ public class PlayerCotroller : MonoBehaviour
 
     #endregion
 
-    void AttackComplete()
-    {
-        moveSpeed /= attackSlowDownModifier;
-        isAttacking = false;
-    }
 
     public void AwardExperience(int xp)
     {

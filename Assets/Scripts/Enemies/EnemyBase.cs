@@ -150,7 +150,7 @@ public class EnemyBase : MonoBehaviour
     {
         if (collision.gameObject.tag == "Axe")
         {
-            var damageTaken = player.GetComponent<PlayerCotroller>().DeliverDamage();
+            var damageTaken = player.GetComponent<PlayerController>().DeliverDamage();
             TakeDamage(damageTaken);
         }
     }
@@ -192,9 +192,10 @@ public class EnemyBase : MonoBehaviour
 
     protected void Die()
     {
-        player.GetComponent<PlayerCotroller>().CheckClear();
+        gameObject.GetComponent<Collider2D>().isTrigger = true;
+        player.GetComponent<PlayerController>().CheckClear();
         animator.Play(ENEMY_DEATH);
-        player.GetComponent<PlayerCotroller>().AwardExperience(XPValue);
+        player.GetComponent<PlayerController>().AwardExperience(XPValue);
         agent.isStopped = true;
         Destroy(gameObject, 4f);
     }
@@ -208,7 +209,7 @@ public class EnemyBase : MonoBehaviour
 
     protected void DealDamage()
     {
-        player.GetComponent<PlayerCotroller>().TakeDamage(damage);
+        player.GetComponent<PlayerController>().TakeDamage(damage);
     }
 
     protected void AttackComplete()
