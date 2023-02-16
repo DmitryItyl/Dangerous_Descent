@@ -22,12 +22,18 @@ public class Projectile : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().Play("AxeStuck");
         var velocity = gameObject.GetComponent<Rigidbody2D>().velocity;
-        if (velocity.x < 0 && velocity.y < 0)
+
+        Vector3 theScale = transform.localScale;
+        if (velocity.x < 0)
         {
-            Vector3 theScale = transform.localScale;
             theScale.x *= -1;
-            transform.localScale = theScale;
         }
+        if (velocity.y < 0)
+        {
+            theScale.y *= -1;
+        }
+        transform.localScale = theScale;
+
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         transform.parent = collision.transform;
     }

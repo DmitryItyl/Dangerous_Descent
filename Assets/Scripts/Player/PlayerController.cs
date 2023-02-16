@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int maxHealth;
     private int currentHealth;
     private int experience;
+    private int levelUPsAvailable = 0;
 
     // Objects references
     private Animator animator;
@@ -252,9 +253,9 @@ public class PlayerController : MonoBehaviour
         if (experience >= 100)
         {
             levelUpButton.SetActive(true);
+            levelUPsAvailable++;
             experience -= 100;
         }
-        // check for lvl up
     }
 
     public void ApplyPowerUp(string powerUpName)

@@ -1,34 +1,31 @@
 fileFormatVersion: 2
-guid: 9d56cd2e3b2b7ef478f791fb8a439a92
+guid: 40e1cae135dffd149bcc0b2c6d558916
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 414353516510866640
-    second: SH_dwarven_shieldmaiden_axe_flying_0
+      213: -5823266510474086506
+    second: SH_dwarven_shieldmaiden_axe_flying02_0
   - first:
-      213: -2385279522899313092
-    second: SH_dwarven_shieldmaiden_axe_flying_1
+      213: 8692266381650421960
+    second: SH_dwarven_shieldmaiden_axe_flying02_1
   - first:
-      213: -779313919475410888
-    second: SH_dwarven_shieldmaiden_axe_flying_2
+      213: 6299118099214527192
+    second: SH_dwarven_shieldmaiden_axe_flying02_2
   - first:
-      213: 6285567400894720421
-    second: SH_dwarven_shieldmaiden_axe_flying_3
+      213: -7864584003349171302
+    second: SH_dwarven_shieldmaiden_axe_flying02_3
   - first:
-      213: -6114459844180050223
-    second: SH_dwarven_shieldmaiden_axe_flying_4
+      213: -5481287730611745066
+    second: SH_dwarven_shieldmaiden_axe_flying02_4
   - first:
-      213: 3015156968899402237
-    second: SH_dwarven_shieldmaiden_axe_flying_5
+      213: 3452248344073925555
+    second: SH_dwarven_shieldmaiden_axe_flying02_5
   - first:
-      213: -1719594184648047384
-    second: SH_dwarven_shieldmaiden_axe_flying_6
+      213: 2948620138833143796
+    second: SH_dwarven_shieldmaiden_axe_flying02_6
   - first:
-      213: 8385335006383447267
-    second: SH_dwarven_shieldmaiden_axe_flying_7
-  - first:
-      213: 2323366400048482007
-    second: SH_dwarven_shieldmaiden_axe_flying_8
+      213: 3911651965235941209
+    second: SH_dwarven_shieldmaiden_axe_flying02_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,181 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_0
+      name: SH_dwarven_shieldmaiden_axe_flying02_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0dc6013f35410c500800000000000000
-      internalID: 414353516510866640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_1
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3eb29369e8c5eed0800000000000000
-      internalID: -2385279522899313092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_2
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83896258e125f25f0800000000000000
-      internalID: -779313919475410888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_3
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a9ea1eaf32da3750800000000000000
-      internalID: 6285567400894720421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_4
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1def142ea23152ba0800000000000000
-      internalID: -6114459844180050223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_5
-      rect:
-        serializedVersion: 2
-        x: 215
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df9da49c94df7d920800000000000000
-      internalID: 3015156968899402237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_6
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e4c93a2336c228e0800000000000000
-      internalID: -1719594184648047384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_7
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 0
-        width: 43
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ec122ac2c1be5470800000000000000
-      internalID: 8385335006383447267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SH_dwarven_shieldmaiden_axe_flying_8
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 19
-        width: 321
-        height: 24
+        width: 27
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +153,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d6c7fd5e614e3020800000000000000
-      internalID: 2323366400048482007
+      spriteID: 69773c236f99f2fa0800000000000000
+      internalID: -5823266510474086506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8e753783221a870800000000000000
+      internalID: 8692266381650421960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da6aed7986fa6750800000000000000
+      internalID: 6299118099214527192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93372e64826bd290800000000000000
+      internalID: -7864584003349171302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de0e21a9dd8ee3b0800000000000000
+      internalID: -5481287730611745066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3f4f00499d8ef20800000000000000
+      internalID: 3452248344073925555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f766b0d46a9be820800000000000000
+      internalID: 2948620138833143796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SH_dwarven_shieldmaiden_axe_flying02_7
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 0
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fc8d0dcbaf84630800000000000000
+      internalID: 3911651965235941209
       vertices: []
       indices: 
       edges: []
